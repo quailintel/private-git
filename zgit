@@ -1,0 +1,7 @@
+#!/bin/bash
+
+pwd=`cat password.txt`
+zip --password $pwd source.zip project
+git add .
+git commit -m "Encrypted commit"
+git push origin master
